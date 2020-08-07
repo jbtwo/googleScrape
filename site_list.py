@@ -1,0 +1,1 @@
+sites = [ 'www.google.com', 'www.google.ca'] 
