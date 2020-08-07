@@ -1,1 +1,1 @@
-sites = [ 'www.google.com', 'www.google.ca'] 
+sites = [ 'www.example.com', 'www.amazon.com'] 
