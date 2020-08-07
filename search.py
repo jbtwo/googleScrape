@@ -13,7 +13,6 @@ USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:65.0) Gecko/20100
 # mobile user-agent
 MOBILE_USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
 
-# sites = ['compassionatech.myshopify.com','bigwallprints.com']
 file_path = '/Users/justinbrown/src/github.com/pythontest/scrape_google/result.txt'
 
 i = 1
