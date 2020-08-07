@@ -5,7 +5,6 @@ import urllib
 import numpy as np
 import requests
 from bs4 import BeautifulSoup
-
 from site_list import sites
 
 # desktop user-agent
@@ -13,7 +12,7 @@ USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:65.0) Gecko/20100
 # mobile user-agent
 MOBILE_USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
 
-file_path = '/Users/justinbrown/src/github.com/pythontest/scrape_google/result.txt'
+file_path = 'result.txt'
 
 i = 1
 
@@ -35,7 +34,7 @@ for site in sites:
         
 
     elif resp.status_code == 200:
-        print(i, "-", currentTime, resp.status_code)
+        print(i, "-", currentTime, site, resp.status_code)
         i = i+1
         soup = BeautifulSoup(resp.content, "html.parser")
         temp1 = soup.find(id="result-stats")
@@ -48,7 +47,7 @@ for site in sites:
             with open(file_path, 'a') as file:
                 # could be any text, appended @ the end of file
                 file.write(result + ' ' + site + '\n')
-        time.sleep((30-5)*np.random.random()+5)  #from 5 to 30 seconds
+        time.sleep((16-5)*np.random.random()+5)  #from 5 to 16 seconds
 
     else:
         print(i, "-", currentTime, r"non 200/429 ¯\_(ツ)_/¯")
